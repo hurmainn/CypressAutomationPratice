@@ -22,8 +22,6 @@ describe('My First Test Suite', () => {
             .click()
         //will fine ADD TO CART only from the second element, because we have reduced the scope by using get and find, we are not finfding from the whole page
 
-
-
     })
 
     it('Testing using Each Method', () => {

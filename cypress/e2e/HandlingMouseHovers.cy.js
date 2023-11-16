@@ -2,12 +2,13 @@ const { expect } = require("chai")
 
 describe('Handling Mouse Hovers', () => {
     beforeEach(() => {
-        cy.visit("https://rahulshettyacademy.com/AutomationPractice/")
+       
     })
 
     //invoke('show) method
     it('Test 1 by invoke method', () => {
-        cy.xpath('/html/body/div[4]/div/fieldset/div/div').as('MouseHoverContent')
+        cy.visit("https://rahulshettyacademy.com/AutomationPractice/")
+         cy.xpath('/html/body/div[4]/div/fieldset/div/div').as('MouseHoverContent')
         cy.get('@MouseHoverContent').invoke('show')  //first we shown the hover, then we will look for its options
         cy.xpath('/html/body/div[4]/div/fieldset/div/div/a[1]').as('Top')
         cy.get('@Top').click()
